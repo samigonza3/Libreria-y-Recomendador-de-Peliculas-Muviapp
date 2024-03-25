@@ -14,6 +14,7 @@ import NewMovie from './Pages/NewMovie'
 import Dashboard from './Pages/Dashboard'
 import Soon from './Pages/Soon'
 import Search from './Pages/Search'
+import Test from './Pages/EditMovie'
 
 import Sinopsis from './Services/sinopsis'
 
@@ -53,6 +54,7 @@ class App extends Component {
           <Route path="/wordclouds" element={<Sinopsis />} />
           <Route path="/search" element={<Search />} />
           <Route path="/soon" element={<Soon />} />
+          <Route path="/test" element={<Test />} />
           </Routes>
 
         </div>

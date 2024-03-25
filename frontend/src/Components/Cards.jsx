@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Card, CardContent, CardMedia, Typography, Box, CardActionArea, Modal, Button } from '@material-ui/core';
 import Rating from '@mui/material/Rating';
+import EditIcon from '@mui/icons-material/Edit';
 
 const MovieCard = ({ titulo, link_thumb, rating, year, sinopsis, link_imdb }) => {
     const [hovered, setHovered] = useState(false);
@@ -77,6 +78,7 @@ const MovieCard = ({ titulo, link_thumb, rating, year, sinopsis, link_imdb }) =>
                     <Typography variant="body1" style={{ marginBottom: '10px' }}>Rating: {adjustedRating}</Typography>
                     <Typography variant="body1" style={{ marginBottom: '10px' }}>Sinopsis: {sinopsis}</Typography>
                     <Button variant="outlined" color="secondary" href={link_imdb} target="_blank" rel="noopener noreferrer">Ver en IMDb</Button>
+                    <Button variant="outlined" color="secondary"><EditIcon /></Button>
                 </div>
             </Modal>
         </React.Fragment>

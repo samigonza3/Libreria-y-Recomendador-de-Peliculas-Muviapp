@@ -39,7 +39,7 @@ const MovieTable = ({ movies, page, rowsPerPage, handleChangePage, handleChangeR
         </Table>
       </TableContainer>
       <TablePagination
-        rowsPerPageOptions={[10, 20, 30]}
+        rowsPerPageOptions={[10, 20, 50]}
         component="div"
         count={movies.length}
         rowsPerPage={rowsPerPage}
