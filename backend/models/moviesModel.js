@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const movieSchema = new mongoose.Schema({
   titulo: String,
   director: String,
-  genero: String,
+  genero: String, 
   year: Number,
   sinopsis: String,
   rating: String,
