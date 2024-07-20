@@ -25,13 +25,13 @@ jobs:
       - name: Build and push back-end image
         uses: docker/build-push-action@v2
         with:
-          context: ./back
+          context: ./backend
           push: true
           tags: user/back-end:latest
 
       - name: Build and push front-end image
         uses: docker/build-push-action@v2
         with:
-          context: ./front
+          context: ./frontend
           push: true
           tags: user/front-end:latest
