@@ -2,7 +2,7 @@ version: '3'
 services:
   back-end:
     build:
-      context: ./back
+      context: ./backend
       dockerfile: Dockerfile
     environment:
       - MONGODB_URI=mongodb+srv://admin:admin@movies.cmi1oka.mongodb.net/?retryWrites=true&w=majority
@@ -13,7 +13,7 @@ services:
 
   front-end:
     build:
-      context: ./front
+      context: ./frontend
       dockerfile: Dockerfile
     ports:
       - "80:80"
