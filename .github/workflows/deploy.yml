@@ -27,11 +27,11 @@ jobs:
         with:
           context: ./backend
           push: true
-          tags: user/back-end:latest
+          tags: samigonza3/back-end:latest
 
       - name: Build and push front-end image
         uses: docker/build-push-action@v2
         with:
           context: ./frontend
           push: true
-          tags: user/front-end:latest
+          tags: samigonza3/front-end:latest
