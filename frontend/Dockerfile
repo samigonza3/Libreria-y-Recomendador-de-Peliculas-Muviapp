@@ -1,20 +1,10 @@
-# Dockerfile (front-end)
-FROM node:14 as build
-
+FROM node:14-alpine as build
 WORKDIR /app
-
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
+COPY package.json /app/package.json
+RUN npm install --only=prod
+COPY . /app
 RUN npm run build
-
-FROM nginx:alpine
-
+FROM nginx:1.16.0-alpine
 COPY --from=build /app/build /usr/share/nginx/html
-
 EXPOSE 80
-
 CMD ["nginx", "-g", "daemon off;"]

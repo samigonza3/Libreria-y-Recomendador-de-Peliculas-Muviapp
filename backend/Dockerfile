@@ -1,14 +1,10 @@
 # Dockerfile (back-end)
-FROM node:14
-
+FROM node:14-alpine
 WORKDIR /app
-
-COPY package*.json ./
-
-RUN npm install
-
-COPY . .
-
-EXPOSE 5000
-
+COPY --from=builder /app/dist /app
+COPY package.json /app/package.json
+RUN apk --no-cache add --virtual builds-deps build-base python
+RUN npm install --only=prod
+EXPOSE 8080 
+USER node
 CMD ["node", "index.js"]

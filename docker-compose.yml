@@ -5,9 +5,9 @@ services:
       context: ./backend
       dockerfile: Dockerfile
     environment:
-      - MONGODB_URI=mongodb+srv://admin:admin@movies.cmi1oka.mongodb.net/?retryWrites=true&w=majority
+      - MONGODB_URI="mongodb+srv://admin:admin@movies.cmi1oka.mongodb.net/?retryWrites=true&w=majority"
     ports:
-      - "5000:5000"
+      - "8080:5000"
     depends_on:
       - mongodb
 
